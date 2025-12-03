@@ -1,5 +1,8 @@
 module.exports = {
-	preset: 'ts-jest',
-	testEnvironment: 'node',
-	testMatch: ['**/drugrunner/**/*.test.ts'],
+        preset: 'ts-jest',
+        testEnvironment: 'node',
+        testMatch: ['**/__tests__/**/*.test.ts', '**/drugrunner/**/*.test.ts'],
+        moduleNameMapper: {
+                '^@/(.*)$': '<rootDir>/src/$1',
+        },
 };
